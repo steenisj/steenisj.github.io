@@ -10,11 +10,11 @@ redirect_from:
 
 {% include base_path %}
 
-Publications
-======
-  <ul>{% for post in site.CV reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+<object data="http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf" type="application/pdf" width="700px" height="700px">
+    <embed src="http://steenisj.github.io/cv/steenis_cv.pdf">
+        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf">Download PDF</a>.</p>
+    </embed>
+</object>
 
 <!--Education
 ======
