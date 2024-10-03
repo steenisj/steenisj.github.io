@@ -21,7 +21,7 @@ repository               : "steenisj/steenisj.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "profile_steenis.png"
   name             : "Jacob Steenis"
   pronouns         : # example: "she/her"  
   bio              : "Hi! I'm a physics PhD student at the UC Davis, currently pursing my research at CERN in Geneva, Switzerland."
