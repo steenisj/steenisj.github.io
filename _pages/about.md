@@ -9,24 +9,23 @@ redirect_from:
 
 <h1>How many hotdogs should you eat today?</h1>
 
-<!-- Use a div or just a button without a form -->
-<button onclick="hotdogEstimator()">How Many?</button>
+<!-- Button to trigger the estimator -->
+<button id="hotdogButton">How Many?</button>
 
 <!-- Element to display the output -->
 <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
 
 <script>
+    // Function to estimate hotdogs and play audio
     function hotdogEstimator() {
-        // Debugging line to check if the function is called
         console.log("hotdogEstimator function called!");
 
-        // Generate a random number
-        var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        // Generate a random number (1 to 10)
+        var randomNumber = Math.floor(Math.random() * 10) + 1;
 
         // Play audio
         var audio = new Audio("{{ '/files/wiiSportsDiscChannel.mp3' | relative_url }}");
-        
-        // Check if the audio file is loaded and can be played
+
         audio.play().then(() => {
             console.log("Audio is playing.");
         }).catch((error) => {
@@ -37,5 +36,7 @@ redirect_from:
         document.getElementById("output").innerHTML = 
             "You must eat " + randomNumber + " hotdogs today!";
     }
-</script>
 
+    // Attach event listener to the button
+    document.getElementById("hotdogButton").addEventListener("click", hotdogEstimator);
+</script>
