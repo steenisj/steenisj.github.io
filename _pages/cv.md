@@ -3,18 +3,13 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
-CVurl: 'http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf'
 redirect_from:
   - /resume
 ---
 
 {% include base_path %}
 
-<object data="http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf" type="application/pdf" width="700px" height="700px">
-    <embed src="http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf">
-        <p>This browser does not support PDFs. Please download the PDF to view it: <a href="http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf">Download PDF</a>.</p>
-    </embed>
-</object>
+{% include_relative _pages/steenis_CV.html %}
 
 <!--Education
 ======
