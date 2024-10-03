@@ -7,6 +7,10 @@ redirect_from:
   - /about.html
 ---
 
+---
+layout: default  # Make sure to specify the layout you're using
+---
+
 <h1>How many hotdogs should you eat today?</h1>
 
 <!-- Use a div or just a button without a form -->
@@ -17,16 +21,25 @@ redirect_from:
 
 <script>
     function hotdogEstimator() {
-        // Prevent any default form submission behavior if inside a form
+        // Debugging line to check if the function is called
+        console.log("hotdogEstimator function called!");
+
         // Generate a random number
         var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
 
         // Play audio
         var audio = new Audio("{{ '/files/wiiSportsDiscChannel.mp3' | relative_url }}");
-        audio.play();
+        
+        // Check if the audio file is loaded and can be played
+        audio.play().then(() => {
+            console.log("Audio is playing.");
+        }).catch((error) => {
+            console.error("Error playing audio:", error);
+        });
 
         // Display the output
         document.getElementById("output").innerHTML = 
             "You must eat " + randomNumber + " hotdogs today!";
     }
 </script>
+
