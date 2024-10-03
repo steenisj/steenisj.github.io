@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-{% include_relative _pages/steenis_CV.html %}
+{% include steenis_CV.html %}
 
 <!--Education
 ======
