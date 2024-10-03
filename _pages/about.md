@@ -9,16 +9,15 @@ redirect_from:
 
 <h1>How many hotdogs should you eat today?</h1>
 
-<!-- Change form to a div to avoid page reload on submit -->
-<div onsubmit="hotdogEstimator(event)">
-    <button type="button" onclick="hotdogEstimator()">How Many?</button>
-</div>
+<!-- Use a div or just a button without a form -->
+<button onclick="hotdogEstimator()">How Many?</button>
 
 <!-- Element to display the output -->
 <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
 
 <script>
     function hotdogEstimator() {
+        // Prevent any default form submission behavior if inside a form
         // Generate a random number
         var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
 
