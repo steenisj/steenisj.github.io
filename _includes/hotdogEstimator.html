@@ -5,10 +5,10 @@
 <script>
     function hotdogEstimator() {
         // Prevent the form from submitting and refreshing the page
-        event.preventDefault();
+        //event.preventDefault();
 
         // Generate a random number
-        var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+        //var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
 
         // Play audio
         //var audio = new Audio("{{ '/files/wiiSportsDiscChannel.mp3' | relative_url }}");
@@ -16,7 +16,7 @@
 
         // Display the output
         document.getElementById("output").innerHTML = 
-            "You must eat " + randomNumber + " hotdogs today!";
+            "You must eat ";// + randomNumber + " hotdogs today!";
     }
 </script>
 
