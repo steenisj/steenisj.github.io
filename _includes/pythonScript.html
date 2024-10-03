@@ -9,10 +9,25 @@
     <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
   </head>
   <body>
-  <!-- Put Python code inside the the <py-script> tag -->
+    <!-- Display output -->
+    <h1 id="output">Hello World!</h1>
+
+    <!-- Create input field and button for user input -->
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" />
+    <button id="submit">Submit</button>
+
+    <!-- PyScript section -->
     <py-script>
-        print("Hello World!")
-        input("Enter your name:")
+        from js import document
+
+        def greet_user(event):
+            name = document.getElementById('name').value
+            output = f"Hello, {name}!"
+            document.getElementById('output').innerHTML = output
+
+        # Bind the button click event to the greet_user function
+        document.getElementById('submit').addEventListener('click', greet_user)
     </py-script>
   </body>
 </html>
