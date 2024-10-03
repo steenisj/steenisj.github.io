@@ -1,38 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotdog Estimator</title>
-    <script>
-        function hotdogEstimator(event) {
-            // Prevent the form from submitting and refreshing the page
-            event.preventDefault();
+{% include base_path %}
 
-            // Generate a random number
-            var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 100
+<script>
+    function hotdogEstimator() {
+        // Debugging line to check if the function is called
+        console.log("hotdogEstimator function called!");
 
-            <audio controls autoplay>
-            <source src="{{ base_path }}/files/wiiSportsDiscChannel.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-            
-            // Display the output
-            document.getElementById("output").innerHTML = 
-                "You must eat " + randomNumber + " hotdogs today!";
-        }
-    </script>
-</head>
-<body>
+        // Generate a random number
+        var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
+
+        // Play audio
+        var audio = new Audio("{{ '{{basepath}}/files/wiiSportsDiscChannel.mp3' | relative_url }}");
+        
+        // Check if the audio file is loaded and can be played
+        audio.play().then(() => {
+            console.log("Audio is playing.");
+        }).catch((error) => {
+            console.error("Error playing audio:", error);
+        });
+
+        // Display the output
+        document.getElementById("output").innerHTML = 
+            "You must eat " + randomNumber + " hotdogs today!";
+    }
+</script>
 
 <h1>How many hotdogs should you eat today?</h1>
 
-<form onsubmit="hotdogEstimator(event)">
-    <input type="submit" value="How Many?">
-</form>
+<!-- Use a div or just a button without a form -->
+<button onclick="hotdogEstimator()">How Many?</button>
 
 <!-- Element to display the output -->
 <div id="output" style="margin-top: 20px; font-weight: bold;"></div>
-
-</body>
-</html>
