@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotdog Estimator</title>
+    <script>
+        function hotdogEstimator(event) {
+            // Prevent the form from submitting and refreshing the page
+            event.preventDefault();
+
+            // Generate a random number
+            var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 100
+
+            // Display the output
+            document.getElementById("output").innerHTML = 
+                "You must eat " + randomNumber + " hotdogs today!";
+        }
+    </script>
+</head>
+<body>
+
+<h1>How many hotdogs should you eat today?</h1>
+
+<form onsubmit="hotdogEstimator(event)">
+    <input type="submit" value="How Many?">
+</form>
+
+<!-- Element to display the output -->
+<div id="output" style="margin-top: 20px; font-weight: bold;"></div>
+
+</body>
+</html>
