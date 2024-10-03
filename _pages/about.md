@@ -7,10 +7,6 @@ redirect_from:
   - /about.html
 ---
 
----
-layout: default  # Make sure to specify the layout you're using
----
-
 <h1>How many hotdogs should you eat today?</h1>
 
 <!-- Use a div or just a button without a form -->
