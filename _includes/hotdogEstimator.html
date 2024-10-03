@@ -12,6 +12,11 @@
             // Generate a random number
             var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 100
 
+            <audio controls autoplay>
+            <source src="{{ base_path }}/files/wiiSportsDiscChannel.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
             // Display the output
             document.getElementById("output").innerHTML = 
                 "You must eat " + randomNumber + " hotdogs today!";
