@@ -21,13 +21,14 @@
     <py-script>
         from js import document
 
-        def greet_user(event):
+        def greet_user(*args):
             name = document.getElementById('name').value
             output = f"Hello, {name}!"
             document.getElementById('output').innerHTML = output
 
         # Bind the button click event to the greet_user function
-        document.getElementById('submit').addEventListener('click', greet_user)
+        submit_button = document.getElementById('submit')
+        submit_button.addEventListener('click', greet_user)
     </py-script>
   </body>
 </html>
