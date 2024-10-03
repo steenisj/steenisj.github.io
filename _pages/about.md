@@ -12,23 +12,12 @@ redirect_from:
 <p id="output">How many hotdogs should you eat today?</p>
 
 <script>
-    function hotdogEstimator() {
-        // Prevent the form from submitting and refreshing the page
-        //event.preventDefault();
-
-        // Generate a random number
-        //var randomNumber = Math.floor(Math.random() * 10) + 1; // Random number between 1 and 10
-
-        // Play audio
-        //var audio = new Audio("{{ '/files/wiiSportsDiscChannel.mp3' | relative_url }}");
-        //audio.play();
-
-        // Display the output
-        document.getElementById("output").innerHTML = "You must eat ";// + randomNumber + " hotdogs today!";
-    }
+    document.addEventListener("DOMContentLoaded", function() {
+        // Ensure the function is set up after the document is loaded
+        document.querySelector("button").onclick = function() {
+            document.getElementById("output").innerHTML = "You clicked the button!"; // Test message
+        };
+    });
 </script>
 
-<button onclick="hotdogEstimator()">How Many?</button>
-
-<!-- Element to display the output 
-<div id="output" style="margin-top: 20px; font-weight: bold;"></div>-->
+<button>How Many?</button>
