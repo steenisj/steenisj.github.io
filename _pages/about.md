@@ -6,8 +6,6 @@ redirect_from:
   - /about/
   - /about.html
 ---
-{% include ambiance.html %}
-
 {% include hotdogEstimator.html %}
 
 
