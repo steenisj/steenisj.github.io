@@ -9,6 +9,12 @@ redirect_from:
 
 {% include base_path %}
 
+Publications
+======
+  <ul>{% for post in site.CV reversed %}
+    {% include archive-single-cv.html %}
+  {% endfor %}</ul>
+
 <!--Education
 ======
 * Ph.D in Version Control Theory, GitHub University, 2018 (expected)
