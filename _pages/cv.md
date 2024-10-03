@@ -3,6 +3,7 @@ layout: archive
 title: "CV"
 permalink: /cv/
 author_profile: true
+CVurl: 'http://steenisj.github.io/files/Jacob_Steenis_CV_initWebsite.pdf'
 redirect_from:
   - /resume
 ---
